@@ -12,13 +12,25 @@ function fase2() {
 }
 
 function fase3() {
-    let nuevaNoticia = document.getElementById('a1'); 
-    nuevaNoticia.innerHTML = `
-        <h1>Nueva noticia agregada</h1>
-        <p class="meta">Publicado por: <span>María Gómez</span></p>
-        <p>Este es el contenido de la nueva noticia añadida dinámicamente.</p>
-    `;
-    let body = document.getElementById("body")
+    let nuevaNoticia = document.createElement('a2');
+    let titulo=document.createElement('h1')
+    titulo.textContent=("Nueva noticia agregada")
+    nuevaNoticia.append(titulo)
+    let paragrafo1=document.createElement('p')
+    paragrafo1.classList.add('meta')
+    paragrafo1.textContent=("Publicado por Leo")
+    nuevaNoticia.append(paragrafo1)
+    let paragrafo2=document.createElement('p')
+    paragrafo2.textContent=("Este es el contenido de la nueva noticia")
+    nuevaNoticia.append(paragrafo2)
+    let comments=document.createElement('div')
+    comments.style.marginTop('20px')
+    comments.style.border('1px solid #ccc')
+    comments.style.padding('10px')
+    let tituloComentarios=document.createElement('h3')
+    tituloComentarios.textContent=("Zona de Comentarios")
+    nuevaNoticia.append(tituloComentarios)
+    
     body.insertBefore(nuevaNoticia);
 }
 
